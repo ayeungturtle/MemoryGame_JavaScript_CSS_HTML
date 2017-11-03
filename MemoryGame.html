@@ -12,10 +12,8 @@
         width: 35px;
         margin: 10px;
     }
-
     .white{background-color:white;}
     .back{background-color: black;}
-
     .red{background-color: red;}
     .blue{background-color: blue;}
     .green{background-color:  green;}
@@ -28,8 +26,6 @@
     .grey{background-color: grey;}
     .lightGreen{background-color: lightgreen;}
     .salmon{background-color: salmon;}
-
-
 </style>
 <script>
 colorArray = ['brown','lightGreen','yellow','lightBlue','pink','purple','grey','green','salmon','blue','orange','brown','lightGreen','red','grey','green','orange','pink','salmon','blue','purple','red','yellow','lightBlue'];
@@ -42,14 +38,12 @@ twoClickMax = (index) => {
     if (counter < 2)
     {
         flipCard(index);
-    }
-    
+    }  
     else
     {
         checkMatch();
         flipCard(index);
     }
-
 }
 
 flipCard = (index) => {
@@ -58,7 +52,6 @@ flipCard = (index) => {
     flippedColors.push(color);
     flippedIDs.push(index);
     counter += 1;
-
 }
 
 checkMatch = () => {
@@ -73,7 +66,6 @@ checkMatch = () => {
 flippedIDs = [];   //reset area
 flippedColors = [];
 counter = 0;
-
     if (matchesLeft == 0)
     {
         document.getElementById("body").innerHTML = "you've really won."
@@ -97,9 +89,7 @@ whiteButton = () => {
         checkMatch();
     }
 }
-
 </script>
-
 </head>
 <body id = "body">
     <div id = 0><div class = "card back" onClick = "twoClickMax(0)"></div></div>
@@ -129,5 +119,4 @@ whiteButton = () => {
     <div id = 22><div class = "card back" onClick = "twoClickMax(22)"></div></div>
     <div id = 23><div class = "card back" onClick = "twoClickMax(23)"></div></div>
 </body>
-
 </html>
